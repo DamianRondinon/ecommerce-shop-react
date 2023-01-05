@@ -13,7 +13,7 @@ const Sidebar = () => {
   const {cart, clearCart, total} = useContext(CartContext);
   return (
   <div className={`${isOpen ? 'right-0' : '-right-full'}
-  w-full bg-black/80 fixed top-0 h-full shadow-2x1
+  w-full bg-black/90 fixed top-0 h-full shadow-2x1
   md:w-[35vw] xl:max-w-[30vw] transition-all duration-400 z-20 px-4 lg:px-[35px] text-white`}>
     <div className='flex items-center justify-between py-5 border-b'>
       <div className='text-white text-2x1 text-sm font-semibold'>Shopping Bag (0)</div>
@@ -22,7 +22,7 @@ const Sidebar = () => {
         <BiX className='text-4xl text-white hover:text-red-400 transition-all duration-400'/>
       </div>
     </div>
-    <div className='flex flex-col gap-y-2 h-[520px] lg:h-[600px] overflow-y-auto
+    <div className='flex flex-col gap-y-2 h-[360px] lg:h-[420px] overflow-y-auto
     overflow-x-hidden border-b'>
       {cart.map((item) => {
         return <CartItem item={item} key={item.id} />;
@@ -39,6 +39,22 @@ const Sidebar = () => {
           <FiTrash2 />
         </div>
       </div>
+      <Link
+      to='/'
+      className='bg-gray-300 flex px-6 py-4 
+      justify-center items-center text-black font-bold w-full hover:bg-white 
+      transition duration-500 ease-in-out transform hover:sacale-105'
+      >
+      View bag
+      </Link>
+      <Link
+      to='/'
+      className='bg-green-600 flex px-6 py-4 
+      justify-center items-center text-white font-bold w-full hover:bg-black 
+      transition duration-700 ease-in-out transform hover:sacale-105'
+      >
+      Order now
+      </Link>
     </div>
   </div>
   );

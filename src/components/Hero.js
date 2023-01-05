@@ -12,16 +12,16 @@ const Hero = () => {
       <div className='flex flex-col justify-center'>
         <div className='font-semibold flex items-center'>
           <div className='w-10'><FiArrowRight className='text-2xl text-blue-600 w-10'/></div>
-          Summer fashion
+          Winter fashion
         </div>
-          <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 0.8 }} transition={{ duration: 0.8 }} className='text-[80px] font-bold mb-4'>TRUE CLOTH</motion.h1>
+          <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 0.8 }} transition={{ delay: 1.5, duration: 4 }} className='text-[80px] font-bold mb-4'>TRUE CLOTH</motion.h1>
           <Link to={'/'} className='uppercase font-semibold self-start 
           border-b-4 border-blue-800 hover:text-sky-900'>
-          <motion.div initial={{ x:'-100vw'}} animate={{ x: 0 }} transition={{ duration: 0.8 }}>see more</motion.div>
+          <motion.div initial={{ x:'-100vw'}} animate={{ x: 0 }} transition={{ delay: 1, duration: 3 }}>see more</motion.div>
           </Link>
       </div>
         <div className='hidden lg:block'>
-          <motion.img  initial={{ scale: -1 }} animate={{ scale: 1, y: -20 }} transition={{ duration: 0.8 }} src={bgHeroImg} alt='' />
+          <motion.img  initial={{ scale: -0.5 }} animate={{ scale: 1 }} transition={{ delay: 0.5, duration: 2 }} src={bgHeroImg} alt='' />
         </div>
     </div>
   </section>
